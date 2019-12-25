@@ -11,5 +11,8 @@
     "url": "git+https://github.com/Saul-BT/curso-react.git"
   },
   "author": "Saul Blanco Tejero",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.12.0"
+  }
 }
