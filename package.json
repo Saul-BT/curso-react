@@ -4,15 +4,19 @@
   "description": "React course",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel index.html"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Saul-BT/curso-react.git"
   },
   "author": "Saul Blanco Tejero",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "react": "^16.12.0"
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
   }
 }
