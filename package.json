@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel src/index.html",
-    "lint": "eslint --fix src/**/*.{js,jsx}"
+    "lint": "eslint --fix src/**/*.{js,jsx}",
+    "format": "prettier --writer \"*.{js,jsx,json,css}\""
   },
   "repository": {
     "type": "git",
@@ -16,6 +17,7 @@
   "dependencies": {
     "husky": "^3.1.0",
     "lint-staged": "^9.5.0",
+    "prettier": "^1.19.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },
@@ -32,9 +34,16 @@
       "pre-commit": "lint-staged"
     }
   },
+  "prettier": {
+    "semi": true
+  },
   "lint-staged": {
     "src/**/*.{js,jsx}": [
       "npm run lint"
+    ],
+    "src/**/*.{js,jsx,json,css,scss}": [
+      "prettier --write",
+      "git add -A"
     ]
   }
 }
