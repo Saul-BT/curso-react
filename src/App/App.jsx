@@ -1,4 +1,5 @@
 import React from "react";
+import "./App.css";
 
 const wishes = [
   { text: "Travel to the moon", done: false },
@@ -7,13 +8,13 @@ const wishes = [
 ];
 
 const App = () => (
-  <div>
-    <h1>My Wishlist</h1>
+  <div className="wish-container">
+    <h3>My Wishlist</h3>
     <fieldset>
       <legend>New wish</legend>
       <input placeholder="Enter wish" />
     </fieldset>
-    <ul>
+    <ul className="wish-list">
       {wishes.map(({ text, done }, i) => (
         <li>
           <input id={`wish${i}`} type="checkbox" checked={done} />
