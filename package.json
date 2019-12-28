@@ -35,7 +35,8 @@
     }
   },
   "prettier": {
-    "semi": true
+    "semi": true,
+    "trailingComma": "all"
   },
   "lint-staged": {
     "src/**/*.{js,jsx}": [
