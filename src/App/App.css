@@ -9,6 +9,6 @@
 }
 
 .wish-container > h3 {
-  color: var(--text-color);
+  color: var(--primary-color);
   text-align: center;
 }

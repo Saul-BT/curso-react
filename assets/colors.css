@@ -1,7 +1,7 @@
 :root {
   --text-color: white;
-  --background-color: #0f0e17;
-  --accent-color: #e53170;
-  --divisor-color: #f25f4c;
-  --line-through-color: #ff8906;
+  --background-color: #121629;
+  --primary-color: #b8c1ec;
+  --secondary-color: #232946;
+  --tertiary-color: #eebbc3;
 }

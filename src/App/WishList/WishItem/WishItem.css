@@ -4,7 +4,7 @@
 }
 
 .wish-item:not(:last-child) {
-  border-bottom: 3px dotted var(--divisor-color);
+  border-bottom: 3px dotted var(--primary-color);
 }
 
 .wish-item > label {
@@ -18,7 +18,7 @@
   left: 0;
   height: 3px;
   width: 0;
-  background-color: var(--line-through-color);
+  background-color: var(--tertiary-color);
   transition: 0.2s;
 }
 

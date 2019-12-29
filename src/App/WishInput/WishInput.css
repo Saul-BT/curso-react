@@ -1,9 +1,16 @@
 .new-wish-control {
-  background-color: var(--accent-color);
+  background-color: var(--secondary-color);
   border: none;
   border-radius: 5px;
 }
 
 .new-wish-control > legend {
-  background-color: #fff;
+  background-color: var(--primary-color);
+}
+
+.new-wish-control > input {
+  color: var(--text-color);
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid var(--primary-color);
 }
