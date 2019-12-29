@@ -1,4 +1,4 @@
-import App from "./App";
+import App from './App';
 
 // Exports 'App' component from 'App' folder.
 // This is cool because with this you can
