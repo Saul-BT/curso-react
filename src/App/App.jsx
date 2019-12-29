@@ -1,5 +1,6 @@
 import React from 'react';
-import Item from './Item';
+import WishInput from './WishInput';
+import WishItem from './WishItem';
 import './App.css';
 
 const wishes = [
@@ -11,19 +12,10 @@ const wishes = [
 const App = () => (
   <div className="wish-container">
     <h3>My Wishlist</h3>
-    <fieldset>
-      <legend>New wish</legend>
-      <input placeholder="Enter wish" />
-    </fieldset>
+    <WishInput />
     <ul className="wish-list">
       {wishes.map(({ text, done }, i) => (
-        /*
-        <li>
-          <input id={`wish${i}`} type="checkbox" checked={done} />
-          <label htmlFor={`wish${i}`}>{text}</label>
-        </li>
-        */
-        <Item id={`wish${i}`} text={text} defChk={done} />
+        <WishItem id={`wish${i}`} text={text} defChk={done} />
       ))}
     </ul>
   </div>

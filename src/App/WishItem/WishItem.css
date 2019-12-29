@@ -1,9 +1,11 @@
 .wish-item {
   padding: 5px 2px 6px;
+  color: white;
+  background-color: #0f0e17;
 }
 
 .wish-item:not(:last-child) {
-  border-bottom: 3px dotted #797979;
+  border-bottom: 3px dotted #f25f4c;
 }
 
 .wish-item > label {
@@ -17,7 +19,7 @@
   left: 0;
   height: 3px;
   width: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #ff8906;
   transition: 0.2s;
 }
 

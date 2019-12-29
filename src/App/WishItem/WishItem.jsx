@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
-import './Item.css';
+import './WishItem.css';
 
-const Item = ({ id, text, defChk }) => {
+const WishItem = ({ id, text, defChk }) => {
   const [checked, setChecked] = useState(defChk);
   return (
     <li className="wish-item">
@@ -17,16 +17,16 @@ const Item = ({ id, text, defChk }) => {
   );
 };
 
-Item.defaultProps = {
+WishItem.defaultProps = {
   id: 'no-id',
   text: 'Empty wish',
   defChk: false,
 };
 
-Item.propTypes = {
+WishItem.propTypes = {
   id: PropTypes.string,
   text: PropTypes.string,
   defChk: PropTypes.bool,
 };
 
-export default Item;
+export default WishItem;
