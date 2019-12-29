@@ -1,0 +1,5 @@
+.wish-list {
+  padding: 5px;
+  background-color: var(--background-color);
+  list-style: none;
+}

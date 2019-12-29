@@ -3,18 +3,12 @@
   min-height: 400px;
   margin: 20px auto;
   padding: 10px;
-  background-color: #0f0e17;
+  background-color: var(--background-color);
   border-radius: 10px;
   box-sizing: border-box;
 }
 
 .wish-container > h3 {
-  color: white;
+  color: var(--text-color);
   text-align: center;
-}
-
-.wish-list {
-  padding: 5px;
-  background-color: #fff;
-  list-style: none;
 }

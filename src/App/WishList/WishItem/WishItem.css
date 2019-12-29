@@ -1,11 +1,10 @@
 .wish-item {
   padding: 5px 2px 6px;
-  color: white;
-  background-color: #0f0e17;
+  color: var(--text-color);
 }
 
 .wish-item:not(:last-child) {
-  border-bottom: 3px dotted #f25f4c;
+  border-bottom: 3px dotted var(--divisor-color);
 }
 
 .wish-item > label {
@@ -19,7 +18,7 @@
   left: 0;
   height: 3px;
   width: 0;
-  background-color: #ff8906;
+  background-color: var(--line-through-color);
   transition: 0.2s;
 }
 
