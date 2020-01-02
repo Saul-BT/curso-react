@@ -1,32 +1,31 @@
 import PropTypes from 'prop-types';
-import React, { useState } from 'react';
+import React from 'react';
 import './WishItem.css';
 
-const WishItem = ({ id, text, defChk }) => {
-  const [checked, setChecked] = useState(defChk);
-  return (
-    <li className="wish-item">
-      <input
-        onClick={() => setChecked(!checked)}
-        id={id}
-        type="checkbox"
-        checked={checked}
-      />
-      <label htmlFor={id}>{text}</label>
-    </li>
-  );
-};
+const WishItem = ({ id, text, done, onDoneChange }) => (
+  <li className="wish-item">
+    <input
+      onChange={(e) => onDoneChange(e.target.checked)}
+      id={id}
+      type="checkbox"
+      checked={done}
+    />
+    <label htmlFor={id}>{text}</label>
+  </li>
+);
 
 WishItem.defaultProps = {
   id: 'no-id',
   text: 'Empty wish',
-  defChk: false,
+  done: false,
+  onDoneChange: () => {},
 };
 
 WishItem.propTypes = {
   id: PropTypes.string,
   text: PropTypes.string,
-  defChk: PropTypes.bool,
+  done: PropTypes.bool,
+  onDoneChange: PropTypes.func,
 };
 
 export default WishItem;

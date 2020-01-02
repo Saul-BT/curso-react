@@ -39,8 +39,10 @@
   },
   "prettier": {
     "semi": true,
+    "tabWidth": 2,
+    "singleQuote": true,
     "trailingComma": "all",
-    "singleQuote": true
+    "arrowParens": "always"
   },
   "lint-staged": {
     "src/**/*.{js,jsx}": [

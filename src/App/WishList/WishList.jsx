@@ -4,16 +4,27 @@ import WishItem from './WishItem';
 
 import './WishList.css';
 
-const WishList = ({ wishes }) => (
+const WishList = ({ wishes, onWishesChange }) => (
   <ul className="wish-list">
     {wishes.map(({ text, done }, i) => (
-      <WishItem id={`wish${i}`} text={text} defChk={done} />
+      <WishItem
+        key={text}
+        id={`wish${i}`}
+        text={text}
+        done={done}
+        onDoneChange={(value) => {
+          const updatedWises = [...wishes];
+          updatedWises[i].done = value;
+          onWishesChange(updatedWises);
+        }}
+      />
     ))}
   </ul>
 );
 
 WishList.defaultProps = {
   wishes: [],
+  onWishesChange: () => {},
 };
 
 WishList.propTypes = {
@@ -23,6 +34,7 @@ WishList.propTypes = {
       text: PropTypes.string,
     }),
   ),
+  onWishesChange: PropTypes.func,
 };
 
 export default WishList;

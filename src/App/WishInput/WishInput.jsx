@@ -11,8 +11,8 @@ const WishInput = ({ onNewWish, title, hint }) => {
       <input
         placeholder={hint}
         value={newWishText}
-        onChange={e => setNewWishText(e.target.value)}
-        onKeyUp={e => {
+        onChange={(e) => setNewWishText(e.target.value)}
+        onKeyUp={(e) => {
           if (e.key === 'Enter' && newWishText.length) {
             onNewWish({ text: newWishText, done: false });
             setNewWishText('');

@@ -17,8 +17,15 @@ const App = () => {
   return (
     <div className="wish-container">
       <h3>My Wishlist</h3>
-      <WishInput onNewWish={wish => setWishes([wish, ...wishes])} />
-      <WishList wishes={wishes} />
+      <WishInput onNewWish={(wish) => setWishes([wish, ...wishes])} />
+      <WishList wishes={wishes} onWishesChange={setWishes} />
+      <button
+        className="archive-button"
+        type="button"
+        onClick={() => setWishes(wishes.filter((wish) => !wish.done))}
+      >
+        Archive done
+      </button>
     </div>
   );
 };
