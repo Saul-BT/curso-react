@@ -25,3 +25,18 @@
 .wish-item > input[type='checkbox']:checked + label::before {
   width: 100%;
 }
+
+.wish-item.warning::after {
+  content: attr(age) ' 😤';
+}
+.wish-item.danger::after {
+  content: attr(age) ' 😡';
+}
+
+.wish-item.warning::after,
+.wish-item.danger::after {
+  position: relative;
+  left: 20px;
+  color: var(--primary-color);
+  font-size: smaller;
+}

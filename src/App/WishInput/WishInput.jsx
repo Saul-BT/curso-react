@@ -9,6 +9,7 @@ const WishInput = ({ onNewWish, title, hint }) => {
     <fieldset className="new-wish-control">
       <legend>{title}</legend>
       <input
+        maxLength="30"
         placeholder={hint}
         value={newWishText}
         onChange={(e) => setNewWishText(e.target.value)}
